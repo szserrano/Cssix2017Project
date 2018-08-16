@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<title>Workout BuddyOut</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+</style>
+<body>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+button:hover {
+    opacity: 0.8;
+}
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+.container {
+    padding: 16px;
+}
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(3,3,3); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+    #map_canvas {
+            width: 1000px;
+                    height: 800px;
+    }
+    .center {
+            margin:auto;
+                    width: 100%;
+                            padding: 10px;
+    }
+</style>
+</head>
+<body>
+
+<h2>Lift More &#9787;</h2>
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="app.html">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+
+
+
+
+
+
+<!-- Top menu -->
+<div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+    <div class="w3-right w3-padding-16">Mail</div>
+    <div class="w3-center w3-padding-16">Workout Buddyout</div>
+  </div>
+</div>
+  
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-quarter">
+            <a href="profile.html"><img src="https://scontent-ort2-1.cdninstagram.com/vp/7f4ec96fbcdcf40189a92b4743aaa078/5BCE7ABD/t51.2885-15/s480x480/e35/c0.126.1080.1080/36160403_689765548035127_1450918696519204864_n.jpg" alt="Sandwich" style="width:100%"></a>
+      <h3>Hector Damian Lopez</h3>
+      <p>Goal: Muscle Gain.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://pbs.twimg.com/profile_images/1014729269287612416/3Gbrfyfk_400x400.jpg" alt="Steak" style="width:100%">
+      <h3>Sydney Serrano</h3>
+      <p>Goal: Be Healthy</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://pbs.twimg.com/media/DkvguPIU8AAdbOP.jpg" alt="Cherries" style="width:100%" height="275">
+      <h3>ChocolateThunder</h3>
+      <p>Goal: Gain Weight</p>
+      
+    </div>
+    <div class="w3-quarter">
+      <img src="https://c1.staticflickr.com/3/2062/32885324035_5d596fcc18_b.jpg" alt="Pasta and Wine" style="width:100%" height="275">
+      <h3>Jaime Raigoza</h3>
+      <p>Goal: Unknown</p>
+    </div>
+  </div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="http://p.fod4.com/p/channels/szqxk/profile/Bwcsu1YQ9G15niiGsKmi_anne-hathaway-head-shot.jpg" alt="Popsicle" style="width:100%" height="275">
+      <h3>AnneLifts</h3>
+      <p>Goal: Be fit</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://pbs.twimg.com/profile_images/992424147388018688/nRAS1k0W_400x400.jpg" alt="Salmon" style="width:100%">
+      <h3>user807084</h3>
+      <p>Goal: Lift</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://www.famousbirthdays.com/headshots/holygxd-5.jpg" alt="Sandwich" style="width:100%">
+      <h3>holyxgxd</h3>
+      <p>Goal: Muscle Gain</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://i.ebayimg.com/images/g/vicAAOSwH2VaD8DQ/s-l300.jpg" alt="Croissant" style="width:100%" height="275">
+      <h3>hatinthecat</h3>
+      <p>Goal: Read More</p>
+    </div>
+  </div>
+
+   <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyCQBC0LS8VAsH3lodC7dJpXokGP1mTa4UI"></script>
+        <script>
+                if("geolocation" in navigator) {
+                        navigator.geolocation.getCurrentPosition(function(position) {
+                                var latlng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+                                var myOptions = {
+                                        zoom: 16,
+                                        center: latlng,
+                                        mapTypeId: google.maps.MapTypeId.TERRAIN,
+                                        disableDefaultUI: false
+                                }
+                                var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+                        });
+                } else {
+                        var para = document.createElement('p');
+                        para.textContent = 'Oof, no geolocation!';
+                        document.body.appendChild(para);
+                }
+        </script>
+
+        <div id="map_canvas" class="center"></div>
+
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div>
+
+
+
+
+
+
+ </body>
+</html>
